@@ -1,20 +1,23 @@
 # cg2022
 
+Este repositório contém instruções de configuração do ambiente de desenvolvimento que será utilizado na disciplina `Computação Gráfica`, exemplos de códigos, e muitos erros de português :P
 
 ## Configuração do ambiente
 
 A parte prática da disciplina será programada na linguagem C e assume que:
-- o sistema operacional utilizado será Linux x64. Sugestão: `Linux Mint 20.3`
-- gcc e dependências estão instaladas.
-  - No `Linux Mint` elas podem ser instaladas com o comando: `apt install build-essential libx11-dev -y`
+- o sistema operacional utilizado será Linux x64. Caso você não tenha uma distribuição instalada ou preferida, fica como sugestão: [Linux Mint 20.3](https://linuxmint.com/)
+- gcc e dependências estão instaladas. No Linux Mint elas podem ser instaladas com o comando: `apt install build-essential libx11-dev -y`
 
-Embora não seja obrigatório, sugere-se a utilização da IDE Visual Studio Code (VS Code), que requer poucas configurações e oferece conveniências como syntax highlighting, code formatting, entre outras.
+Embora não seja obrigatório, sugere-se a utilização da IDE Visual Studio Code (VS Code), pois ela requer poucas configurações e oferece conveniências como syntax highlighting, code formatting, entre outras.
+
 
 ### Usando máquina virtual
 
-Para quem utiliza máquinas virtuais, neste [link](borken) há uma Oracle VirtuaBox VM pré-configurada.
-- usuário `user`
-- senha `password`
+Para quem utiliza máquinas virtuais, neste [link](https://drive.google.com/file/d/1fv4daw6-TA4CTkYkrgzLt7tJuBM9VABd/view?usp=sharing) há uma Oracle VirtuaBox VM pré-configurada.
+
+Autenticação da VM:
+- usuário: `user`
+- senha: `password`
 
 Para quem não pode ou não quer utilizar uma máquina virtual, continue lendo :) não é complicado configurar manualmente.
 
@@ -38,4 +41,17 @@ A última etapa, opcional, é habilitar a opção "formatar código toda vez que
 Para verificar se tudo está configurado corretamente:
 - Clone o repositório `https://github.com/Mirandatz/cg2022`
 - Abra a pasta do repositório no VS Code
-- Abra o `terminal integrado` do VS Code pressionando ``ctrl+shift+` `` e execute o comando `make`, se uma janela com uma imagem rosa abrir, então está tudo configurado :)
+- Abra o `terminal integrado` do VS Code pressionando ``ctrl+shift+` `` e execute o comando `make`, se uma janela com uma imagem vermelha (ou azul), então está tudo configurado :)
+
+## Exemplos de códigos
+
+Os códigos localizados na pasta `src` contém implementações de estruturas de dados e algoritmos da disciplina; elas são apenas exemplos, e não implementações canônicas. Sintam-se à vontade (encorajadas(os), na verdade!!) para criar suas próprias versões :)
+
+Caso desejem utilizar esse repositório como base para seus próprios códigos, segue uma breve explicação da sua organização.
+
+O arquivo `Makefile`, localizado na raiz deste repositório é utilizado para compilar e executar os códigos da pasta `src`. Esse arquivo é processado pelo programa `make`, que deve ser invocado na raiz do repositório. Os resultados dependem de quais argumentos forem passados:
+- `make`: compila o arquivo `src/main.c`, gerando um executável `src/main.o`, e executa o arquivo `main.o`
+- `make run`: mesma coisa que `make`
+- `make clean`: remove arquivos gerados pelo `make`
+
+Para quem tem curiosidade sobre como o programa `make` e o arquivo `Makefile` funcionam, fica a [sugestão de leitura](https://www.gnu.org/software/make/manual/html_node/Introduction.html).
