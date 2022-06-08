@@ -41,7 +41,7 @@ A última etapa, opcional, é habilitar a opção "formatar código toda vez que
 Para verificar se tudo está configurado corretamente:
 - Clone o repositório `https://github.com/Mirandatz/cg2022`
 - Abra a pasta do repositório no VS Code
-- Abra o `terminal integrado` do VS Code pressionando ``ctrl+shift+` `` e execute o comando `make`, se uma janela com uma imagem vermelha (ou azul), então está tudo configurado :)
+- Abra o `terminal integrado` do VS Code pressionando ``ctrl+shift+` `` e execute o comando `make env_check`, se uma janela com uma imagem roxa (? amaranth? purple? sei lá o nome) aparecer, então está tudo configurado corretamente :)
 
 ## Exemplos de códigos
 
@@ -52,6 +52,7 @@ Caso desejem utilizar esse repositório como base para seus próprios códigos, 
 O arquivo `Makefile`, localizado na raiz deste repositório é utilizado para compilar e executar os códigos da pasta `src`. Esse arquivo é processado pelo programa `make`, que deve ser invocado na raiz do repositório. Os resultados dependem de quais argumentos forem passados:
 - `make`: compila o arquivo `src/main.c`, gerando um executável `src/main.o`, e executa o arquivo `main.o`
 - `make run`: mesma coisa que `make`
+- `make env_check`: compila o arquivo `src/env_check.c`, gerando um executável `src/env_check.o`, que é executado e depois apagado
 - `make clean`: remove arquivos gerados pelo `make`
 
 Para quem tem curiosidade sobre como o programa `make` e o arquivo `Makefile` funcionam, fica a [sugestão de leitura](https://www.gnu.org/software/make/manual/html_node/Introduction.html).

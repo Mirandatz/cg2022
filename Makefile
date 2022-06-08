@@ -5,6 +5,12 @@ HEADERS := $(wildcard src/*.h)
 run: src/main.o
 	./src/main.o
 
+.PHONY: env_check
+env_check:
+	cc $(CFLAGS) -o src/env_check.o src/env_check.c
+	./src/env_check.o; rm ./src/env_check.o
+
+
 src/main.o: src/main.c $(HEADERS)
 	echo $(HEADERS)
 	cc $(CFLAGS) -o src/main.o src/main.c
