@@ -11,7 +11,7 @@ A parte prática da disciplina será programada na linguagem C e assume que:
 Embora não seja obrigatório, sugere-se a utilização da IDE Visual Studio Code (VS Code), pois ela requer poucas configurações e oferece conveniências como syntax highlighting, code formatting, entre outras.
 
 
-### Usando máquina virtual
+### Máquina virtual
 
 Para quem utiliza máquinas virtuais, neste [link](https://drive.google.com/file/d/1fv4daw6-TA4CTkYkrgzLt7tJuBM9VABd/view?usp=sharing) há uma Oracle VirtuaBox VM pré-configurada.
 
@@ -45,14 +45,15 @@ Para verificar se tudo está configurado corretamente:
 
 ## Exemplos de códigos
 
-Os códigos localizados na pasta `src` contém implementações de estruturas de dados e algoritmos da disciplina; elas são apenas exemplos, e não implementações canônicas. Sintam-se à vontade (encorajadas(os), na verdade!!) para criar suas próprias versões :)
+Os códigos localizados na pasta `src` contém implementações de estruturas de dados e algoritmos da disciplina; elas são apenas exemplos, não implementações canônicas. Sintam-se à vontade (encorajadas(os), na verdade!!) para criar suas próprias versões :)
 
 Caso desejem utilizar esse repositório como base para seus próprios códigos, segue uma breve explicação da sua organização.
 
 O arquivo `Makefile`, localizado na raiz deste repositório é utilizado para compilar e executar os códigos da pasta `src`. Esse arquivo é processado pelo programa `make`, que deve ser invocado na raiz do repositório. Os resultados dependem de quais argumentos forem passados:
 - `make`: compila o arquivo `src/main.c`, gerando um executável `src/main.o`, e executa o arquivo `main.o`
 - `make run`: mesma coisa que `make`
-- `make env_check`: compila o arquivo `src/env_check.c`, gerando um executável `src/env_check.o`, que é executado e depois apagado
-- `make clean`: remove arquivos gerados pelo `make`
+- `make env_check`: compila o arquivo `src/env_check.c`, gerando um executável `src/env_check.o`, que é executado e depois apagado. Serve exclusivamente para verificar se está tudo ok :)
+- `make clean`: remove arquivos (.o) gerados pelo `make`
 
 Para quem tem curiosidade sobre como o programa `make` e o arquivo `Makefile` funcionam, fica a [sugestão de leitura](https://www.gnu.org/software/make/manual/html_node/Introduction.html).
+
