@@ -3,17 +3,15 @@ HEADERS := $(wildcard src/*.h)
 
 .PHONY: run
 run: src/main.o
-	./src/main.o
+	@ ./src/main.o
+
+src/main.o: src/main.c $(HEADERS)
+	@ cc $(CFLAGS) -o src/main.o src/main.c
 
 .PHONY: env_check
 env_check:
 	cc $(CFLAGS) -o src/env_check.o src/env_check.c
 	./src/env_check.o; rm ./src/env_check.o
-
-
-src/main.o: src/main.c $(HEADERS)
-	echo $(HEADERS)
-	cc $(CFLAGS) -o src/main.o src/main.c
 
 .PHONY: clean
 clean:
