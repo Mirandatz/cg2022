@@ -3,6 +3,7 @@
 #include <X11/Xlib.h>
 #include <assert.h>
 #include <inttypes.h>
+#include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
 

@@ -1,5 +1,3 @@
-#include <stdbool.h>
-
 #include "cg_image.h"
 
 int main() {
