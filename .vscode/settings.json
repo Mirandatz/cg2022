@@ -1,0 +1,17 @@
+{
+    "makefile.extensionOutputFolder": "./.vscode",
+    "C_Cpp.default.configurationProvider": "ms-vscode.makefile-tools",
+    "files.associations": {
+        "*.c": "c",
+        "*.h": "c",
+        "istream": "c",
+        "new": "c",
+        "sstream": "c",
+        "streambuf": "c",
+        "utility": "c",
+        "array": "c",
+        "string": "c",
+        "string_view": "c",
+        "random": "c"
+    },
+}
