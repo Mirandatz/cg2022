@@ -1,2 +1,11 @@
+# object files
 src/*.o
-.vscode/
+
+# Murillo
+bibgraf*/
+
+# Test code
+playground/
+
+# tmp files
+.vscode/*.log
