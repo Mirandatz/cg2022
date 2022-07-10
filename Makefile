@@ -1,4 +1,4 @@
-CFLAGS := -std=c17 -lX11 -pedantic -Wextra -Wall -Werror -Wfloat-equal -fsanitize=address,undefined
+CFLAGS := -std=c17 -lm -lX11 -pedantic -Wextra -Wall -Werror -fsanitize=address,undefined -g 
 HEADERS := $(wildcard src/*.h)
 
 .PHONY: run
@@ -6,7 +6,7 @@ run: src/main.o
 	@ ./src/main.o
 
 src/main.o: src/main.c $(HEADERS)
-	@ cc $(CFLAGS) -o src/main.o src/main.c
+	@ cc $(CFLAGS) src/main.c  -o src/main.o 
 
 .PHONY: env_check
 env_check:
